@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Gaming Components</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<style>
+/* ============================= */
+/* GOOGLE FONT */
+/* ============================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;700;800&display=swap');
+
+/* ============================= */
+/* ROOT VARIABLES */
+/* ============================= */
+
+:root { 
+
+  --dark-clr:#081120; 
+  --nav-link-clr:#e6e6e6;
+  --blue-text-clr:#b4bcd0;
+  --dark-blue-clr:#0047b3;#
+  --blue-clr:#005ce6;
+  --light-clr:#0073e6;
+  --border-clr:#003366;
+  --p-border-clr:#e6ffff;
+  --p-bg-clr:#93c5fd;
+
+  --cart-price-clr:#60a5fa;
+
+  --dark:#030712;
+  --card:#0f172a;
+  --border:#1e293b;
+  --blue:#3b82f6;
+  --text:#ffffff;
+  --muted:#94a3b8;
+
+  --des-clr:#cbd5e1;
+  --row-clr:rgba(59,130,246,0.15);
+  --cart-clr:rgba(255,255,255,0.03);
+  --cart-border-clr:rgba(255,255,255,0.06);
+  --addcart-shafow-clr:rgba(37,99,235,0.3);
+  --addcart-shadow-hover-btn:rgba(37,99,235,0.45);  
+}
+
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Plus Jakarta Sans", sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: black;
+}
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+.navbar{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 80px;
+    position:fixed;
+    top:0;
+    left:0;
+    background:var(--dark-clr);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:white;
+}
+
+.logo span{
+    margin-right:8px;
+    background:var(--blue-clr);
+    padding:5px;
+    border-radius:5px;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--nav-link-clr);
+    font-size:15px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.nav-links a.active{
+    color:white;
+}
+
+/* MENU ICON */
+
+.nav-links .icon{
+    display:none;
+}
+
+
+/* ============================= */
+/* CART SECTION */
+/* ============================= */
+
+.container{
+    max-width:1200px;
+    margin:120px auto 40px;
+    padding:20px;
+}
+
+.page-title{
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.cart-wrapper{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+/* CART ITEMS */
+
+.cart-items{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.cart-item{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.cart-item img{
+    width:130px;
+    height:130px;
+    object-fit:cover;
+    border-radius:16px;
+}
+
+.cart-details{
+    flex:1;
+}
+
+.cart-details h3{
+    font-size:22px;
+    margin-bottom:10px;
+    color: var(--blue-text-clr);
+}
+
+.cart-price{
+    font-size:22px;
+    color: var(--cart-price-clr);
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+/* QTY */
+
+.qty-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-top: 40px;
+}
+
+.qty-box button{
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+    );
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.qty-box button:hover{
+    transform:translateY(-3px);
+}
+
+.qty-number{
+    font-size:18px;
+    font-weight:700;
+    color: white;
+}
+
+.remove-btn{
+    margin-top:20px;
+    background:none;
+    border:none;
+    color : var(--blue-text-clr);
+    cursor:pointer;
+    font-size:15px;
+}
+
+.item-total{
+    margin-top: 20px;
+    font-size:22px;
+    font-weight:700;
+    color: var(--blue-text-clr);
+}
+
+/* SUMMARY */
+
+.summary{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:25px;
+    height:max-content;
+}
+
+.summary h2{
+    margin-bottom:25px;
+    color: var(--blue-text-clr);
+}
+
+.summary-row,
+.summary-total{
+    display:flex;
+    justify-content:space-between;
+    margin:18px 0;
+    color: var(--blue-text-clr);
+}
+
+.summary-row{
+    color:var(--muted);
+}
+
+.summary-total{
+    font-size:24px;
+    font-weight:700;
+}
+
+.checkout-btn{
+    width:100%;
+    margin-top:20px;
+    padding:16px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+    );
+    color:white;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.checkout-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+    0 15px 30px rgba(37,99,235,0.35);
+}
+
+.continue{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    color: var(--p-bg-clr);
+    text-decoration:none;
+}
+
+.empty-cart{
+    background:var(--card);
+    color: var(--blue-text-clr);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    border:1px solid var(--border);
+}
+.footer-bottom {
+  background: var(--dark);
+  color: var(--blue-text-clr);
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 1px solid #3a3f44;
+}
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media screen and (max-width:600px){
+
+    .navbar{
+        padding:20px;
+    }
+
+    .nav-links{
+        gap:20px;
+    }
+
+    .nav-links li:not(.icon){
+        display:none;
+    }
+
+    .nav-links .icon{
+        display:block;
+    }
+
+    .nav-links.responsive{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#081120;
+        display:flex;
+        flex-direction:column;
+        gap:25px;
+        padding:25px;
+    }
+
+    .nav-links.responsive li{
+        display:block;
+    }
+    .container{
+        margin-top:100px;
+    }
+
+    .page-title{
+        font-size:30px;
+    }
+    .cart-wrapper{
+        grid-template-columns:1fr;
+    }
+    .cart-item{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .cart-item img{
+
+        width:100%;
+        height:220px;
+    }
+
+    .qty-box{
+        justify-content:center;
+    }
+    .checkout-btn{
+      font-size: 16px;
+      padding: 12px;
+    }
+    .footer-bottom {
+        font-size: 12px;
+    }
+} 
+
+
+/*            Tablet              */
+@media screen and (max-width:900px){
+
+    .navbar{
+        padding:20px;
+    }
+
+    .nav-links{
+        gap:20px;
+    }
+
+    .nav-links li:not(.icon){
+        display:none;
+    }
+
+    .nav-links .icon{
+        display:block;
+    }
+
+    .nav-links.responsive{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#081120;
+        display:flex;
+        flex-direction:column;
+        gap:25px;
+        padding:25px;
+    }
+
+    .nav-links.responsive li{
+        display:block;
+    }
+    .cart-wrapper{
+        grid-template-columns:1fr;
+    }
+    .checkout-btn{
+      font-size: 16px;
+      padding: 12px;
+    }
+}  
+</style>
+<body style="background: black;">
+
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav class="navbar">
+
+  <div class="logo">
+    <span>PC</span>
+     Palace
+  </div>
+
+  <ul class="nav-links" id="myTopnav">
+
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="gaming.html">Gaming PCs</a></li>
+    <li><a href="component.html">Components</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <!-- MENU ICON -->
+    <li class="icon">
+      <a href="javascript:void(0);" onclick="myFunction()">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </li>
+
+  </ul>
+
+</nav>
+
+
+<section class="container">
+    <h1 class="page-title">
+        Shopping Cart
+    </h1>
+    <div class="cart-wrapper">
+        <div id="cartItems" class="cart-items"></div>
+        <div class="summary">
+            <h2>Order Summary</h2>
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span id="shipping">$15.00</span>
+            </div>
+            <hr>
+            <div class="summary-total">
+                <span>Total</span>
+                <span id="total">$0.00</span>
+            </div>
+            <button class="checkout-btn">
+                    Pre-Order Now
+            </button>
+            <a href="gaming.html" class="continue">
+                Continue Shopping
+            </a>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Gaming Components</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style-1.css">
+</head>
+<body style="background: black;">
+
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav class="navbar">
+
+  <div class="logo">
+    <span>PC</span>
+     Palace
+  </div>
+
+  <ul class="nav-links" id="myTopnav">
+
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="gaming.html">Gaming PCs</a></li>
+    <li><a href="component.html">Components</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <!-- MENU ICON -->
+    <li class="icon">
+      <a href="javascript:void(0);" onclick="myFunction()">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+    </li>
+
+  </ul>
+
+</nav>
+<button onclick="goBack()" class="back-btn">
+   <i class="fa-solid fa-arrow-left"></i>
+   Back to Products
+</button>
+
+<div class="flex-container"
+     data-name="Mid-Range Powerhouse"
+     data-price="1499"
+     data-img="photo-1591799264318-7e6ef8ddb7ea.jpg">
+     
+    <div>
+        <img src="photo-1591799264318-7e6ef8ddb7ea.jpg">
+    </div>
+    <div class="description">        
+        <p class="des">
+            <span class="h2">Mid-Range Powerhouse</span><br>
+            <span class="price" >$1,499
+        </p>
+        <p>
+            <span class="h5" style="margin-top: 30px;">Description</span><br>
+            <span class="des-1"style="margin-top: 20px;">Powerful Ryzen 7 5800X gaming PC with RTX 4060 Ti, 32GB DDR4, and fast 1TB NVMe for smooth gaming and performance.
+</span>
+        </p>
+        <p>
+            <span class="h5">Weight</span><br>
+            <span class="des-1">1 lbs</span>
+        </p>
+        <p><span class="h5"style="margin-top: 40px;">Nutrition Information</span></p>
+
+        <div class="row">
+            <div class="col">
+                <p>
+                    <span class="h5">CPU</span><br>
+                    <span class="des-1">Ryzen 7 5800X</span>
+                </p>
+                <p>
+                    <span class="h5">RAM</span><br>
+                    <span class="des-1">32GB DDR4</span>
+                </p>
+            </div>
+
+            <div class="col">
+                <p>
+                    <span class="h5">GPU</span><br>
+                    <span class="des-1">RTX 4060 Ti</span>
+                </p>
+                <p>
+                    <span class="h5">Storage</span><br>
+                    <span class="des-1">1TB NVMe</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="cart-box">
+            <span class="h5">Quantity:</span>
+            <button class="minus">-</button>
+            <span class="quantity">0</span>
+            <button class="plus">+</button>
+        </div>
+        
+        <button class="addcart">
+            <i class="fa-solid fa-cart-shopping"></i>Add to Cart
+        </button>
+    </div>
+</div>
+<div class="footer-bottom">
+ Copyright © 2026 Disansa Web. All Rights Reserved.
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
