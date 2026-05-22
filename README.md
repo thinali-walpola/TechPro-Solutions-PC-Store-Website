@@ -28,7 +28,7 @@ This project features a clean dark-themed UI designed for computer shops, gaming
 
 This project was created to improve frontend development skills and practice building modern business websites with responsive layouts and professional UI design.
 
-##watch Demo live [https://thinali-walpola.github.io/FreshMarket-/]
+##watch Demo live [https://thinali-walpola.github.io/TechPro-Solutions-PC-Store-Website/]
 
 👋 I can turn your design into a clean, modern, professional website—order here 👉 [(https://www.fiverr.com/disansa_web?public_mode=true)] 🚀 Future Improvements
 
